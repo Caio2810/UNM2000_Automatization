@@ -1,0 +1,14 @@
+Login command:
+LOGIN:::CTAG::UN=user-name,PWD=password;
+
+Command to list unauthenticated ONUs:
+LST-UNREGONU::OLTID=olt-name,PONID=pon_name:CTAG::;
+
+Command to add an ONU:
+ADD-ONU::OLTID={olt_name},PONID={ponport_location}:CTAG::AUTHTYPE={authtype},ONUID={onu_index},NAME={name},ONUTYPE={onutype};
+
+Command to configure WAN service on an ONU:
+SET-WANSERVICE::OLTID={olt_name},PONID={ponport_location},ONUID={onu_index}:CTAG::STATUS={status},MODE={mode},CONNTYPE={connecttype},VLAN={vlan},COS={cos},QOS={qos},NAT={nat},IPMODE={ipmode},PPPOEPROXY={proxy},PPPOEUSER={pppoeusername},PPPOEPASSWD={pppoepassword},PPPOENAME={pppoename},PPPOEMODE={pppoemode},UPORT={uport},SSID={ssidno},WANSVC=1;
+
+Remove ONU command:
+DEL-ONU::OLTID={olt_name},PONID={ponport_location}:CTAG::ONUIDTYPE={onuidtype},ONUID={onu_index};
